@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Feed</title>
+    <!-- <link rel="stylesheet" href="/css/main_style.css"> -->
+    <!-- <script src="./javascript/newsfeed.js"></script> -->
+</head>
+<style>
+p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.8;
+  padding: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #6b6bff);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+p:hover {
+  transform: scale(1.05);
+}
+
+
+p::before {
+  content: "🔥"; 
+  margin-right: 15px;
+  font-size: 28px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+
+</style>
+<body style="color: grey;">
+    <div class="newstab">Latest News</div>
+    <div class="newscontent" style="color: grey;">
+        <marquee class="news-marquee" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <ul id="notifications" class="news-list">
+            </ul>
+        </marquee>
+    </div>
+<p>Helloo Vikas </p>
+<p>vikas Sanodiya</p>
+</body>
+</html>

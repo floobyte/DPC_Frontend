@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="shortcut icon" href="image/logoDPC.png" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/contact_style.css">
+   
+    <link rel="stylesheet" href="./css/newcf.css">
+	<link rel="stylesheet" href="./css/try.css"> 
+</head>
+
+<body>
+	  <div id="news-container"></div>
+		<div id="nav-container"></div>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title"></h3>
+         
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>D.P. Chaturvedi College Seoni (M.P.)</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>dpccollege@gamil.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>123-456-789</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Admission form</h3>
+            
+            <!-- Your Name -->
+            <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="name">Your Name</label>
+                <span class="placeholder-text">Enter the name</span>
+            </div>
+            
+            <!-- Email Address -->
+            <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="email">Email Address</label>
+                <span class="placeholder-text">Enter the Email ID</span>
+            </div>
+            
+            <!-- Phone -->
+            <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="phone">Phone</label>
+                <span class="placeholder-text">Enter the Mobile number</span>
+            </div>
+            
+            <!-- Gender -->
+            <div class="input-container">
+              <label></label>
+              <select name="gender" class="input">
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+              </select>
+          </div>
+          
+            
+            <!-- Date Of Birth -->
+            <div class="input-container">
+                <input type="text" name="dob" class="input" placeholder="mm/dd/yyyy" />
+                <label for="dob">Date Of Birth</label>
+                <span class="placeholder-text">mm/dd/yyyy</span>
+            </div>
+            
+            <!-- Course -->
+            <div class="input-container">
+                <select name="course" class="input">
+                    <option value="" disabled selected>Select the Course</option>
+                    <option value="BSC">BSC</option>
+                    <option value="MSC">MSC</option>
+                    <option value="BA">BA</option>
+                </select>
+            </div>
+            
+            <!-- 12th Marksheet -->
+            <div class="input-container">
+                <label>              </label>
+                <input type="file" name="marksheet" class="input" />
+                <span class="placeholder-text"> 12th Marksheet</span>
+            </div>
+            
+          
+            
+            <input type="submit" value="Submit" class="btn" />
+        </form>
+        
+        
+         
+        </div>
+        
+      </div>
+    </div>
+    <div id="footer-container"></div>
+    <script src="app.js"></script>
+    <script>
+        function toggleReadMore() {
+          var moreContent = document.getElementById("moreContent");
+          var readMoreBtn = document.getElementById("readMoreBtn");
+        
+          if (moreContent.style.display === "none") {
+            moreContent.style.display = "inline";
+            readMoreBtn.textContent = "Read Less";
+          } else {
+            moreContent.style.display = "none";
+            readMoreBtn.textContent = "Read More";
+          }
+        }
+        </script>
+  </body>
+
+<script>
+    function sendmail(){
+		Email.send({}).then(
+	message => alert("Your Message Is Successful - Team DPC")
+);
+		}
+</script>
+
+<script src="./components/exportData.js"></script>
+
+</html>

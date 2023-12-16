@@ -1,0 +1,648 @@
+/*pre define stle*/
+*{
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid yellow; */
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Poppins/Poppins-Regular.ttf);
+}
+  @font-face {
+  font-family: bold;
+  src: url(../Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: secound;
+  src: url(../Poppins/Poppins-Bold.ttf);
+}
+
+/* ------------------------ */
+
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 45%;
+  max-height: 30%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+#modal-caption,
+#modal-date {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 70%;
+}
+
+.modal-details {
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  max-width: 100%;
+}
+.img-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* ----------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: myFirstFont;
+}
+/* style for whole body secction*/
+body {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url(/image/bgfile.jpg);
+  background-attachment: fixed; /* This ensures the background image stays fixed */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-clr);
+  font-family: myFirstFont;
+}
+
+/*
+  this variable are used to make the site responsive.
+*/
+:root {
+  --columns_in_gallery: 8;
+  --grid_gap: 22px;
+  --logo_fsize: 1.75rem;
+  --title_fsize: 1.35rem;
+  --GTR: 145px;
+}
+
+/* framework which we will use */
+.grid {
+  grid-gap: var(--grid_gap);
+  /*here var(--grid_gap) is define how much gap between grid items */
+  display: grid !important;
+  grid-template-columns: repeat(var(--columns_in_gallery), 1fr);
+  width: 100%;
+}
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.row-1 {
+  grid-row: span 1;
+}
+.row-2 {
+  grid-row: span 2;
+}
+.row-3 {
+  grid-row: span 3;
+}
+
+.img_item {
+  position: relative;
+}
+
+.img_item p:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.img_item {
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.img_item:hover {
+  box-shadow: 0 0 10px rgba(233, 222, 222, 0.5); /* Apply a shadow when hovering */
+}
+
+/*
+  this is the main container , which contain the whole project.
+  and the sections are menu-bar then the gallery section and the footer section.
+*/
+.container {
+  width: 95%;
+  margin: 0 auto;
+
+  /* max-width: 120rem; */
+  /*fixed the limit of main container width*/
+}
+
+/*
+  this is menu
+*/
+.menubar {
+  padding: 0.5rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-rows: min-content;
+  align-items: center;
+}
+.menu_items {
+  display: grid;
+  grid-template-columns: repeat(6, min-content);
+  grid-template-rows: min-content;
+}
+.btn {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(152, 78, 170),
+    rgba(70, 5, 95, 0)
+  );
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*this is mainly the image container for make a gallery.*/
+.img_container {
+  margin: 2rem auto;
+  align-content: center;
+  grid-template-rows: var(--GTR);
+  grid-auto-rows: var(--GTR);
+  grid-auto-flow: dense;
+}
+.img_item {
+  position: relative;
+  /*position ralative because the title of image's position is absolute and it will stay upper of image.*/
+  overflow: hidden;
+}
+.img_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit cover; it will cover the intire image block and show center position of image.*/
+}
+.img_item p {
+  display: none;
+  /*initialy this title will be hidden. after hover on image block, this title will show.*/
+}
+.img_item:hover {
+  box-shadow: 0px 0px 10px #cd61e799;
+}
+.img_item:hover p {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #ffffff1f;
+  color: rgb(15, 15, 15);
+  text-align: justify;
+  text-align-last: left;
+}
+.img_item:hover img {
+  opacity: 0.8;
+}
+
+.footer {
+  background: #d0d0d0d0;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+p {
+  font-size: var(--title_fsize);
+}
+.logo {
+  font-size: var(--logo_fsize);
+}
+@media only screen and (min-width: 7500px) {
+  :root {
+    --columns_in_gallery: 15;
+    --grid_gap: 75px;
+    --logo_fsize: 4rem;
+    --title_fsize: 2.5rem;
+    --GTR: 430px;
+  }
+}
+@media only screen and (min-width: 5000px) and (max-width: 7499px) {
+  :root {
+    --columns_in_gallery: 12;
+    --grid_gap: 65px;
+    --logo_fsize: 3.5rem;
+    --title_fsize: 2.5rem;
+    --GTR: 395px;
+  }
+}
+@media only screen and (min-width: 4000px) and (max-width: 4999px) {
+  :root {
+    --columns_in_gallery: 10;
+    --grid_gap: 50px;
+    --logo_fsize: 3rem;
+    --title_fsize: 1.7rem;
+    --GTR: 380px;
+  }
+}
+@media only screen and (min-width: 3000px) and (max-width: 3999px) {
+  :root {
+    --columns_in_gallery: 9;
+    --grid_gap: 45px;
+    --logo_fsize: 2.75rem;
+    --title_fsize: 1.65rem;
+    --GTR: 325px;
+  }
+}
+@media only screen and (min-width: 2000px) and (max-width: 2999px) {
+  :root {
+    --columns_in_gallery: 9;
+    --grid_gap: 40px;
+    --logo_fsize: 2.5rem;
+    --title_fsize: 1.6rem;
+    --GTR: 230px;
+  }
+}
+@media only screen and (min-width: 1700px) and (max-width: 1999px) {
+  :root {
+    --columns_in_gallery: 8;
+    --grid_gap: 30px;
+    --logo_fsize: 2rem;
+    --title_fsize: 1.5rem;
+    --GTR: 195px;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1699px) {
+  :root {
+    --columns_in_gallery: 8;
+    --grid_gap: 25px;
+    --logo_fsize: 1.85rem;
+    --title_fsize: 1.4rem;
+    --GTR: 170px;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  :root {
+    --columns_in_gallery: 7;
+    --grid_gap: 20px;
+    --logo_fsize: 1.7rem;
+    --title_fsize: 1.3rem;
+    --GTR: 145px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1099px) {
+  :root {
+    --columns_in_gallery: 7;
+    --grid_gap: 20px;
+    --logo_fsize: 1.7rem;
+    --title_fsize: 1.3rem;
+    --GTR: 123px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+  :root {
+    --columns_in_gallery: 6;
+    --grid_gap: 15px;
+    --logo_fsize: 1.5rem;
+    --title_fsize: 1.1rem;
+    --GTR: 125px;
+  }
+  .img_item:hover p {
+    padding: 0.8rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+  :root {
+    --columns_in_gallery: 6;
+    --grid_gap: 12px;
+    --logo_fsize: 1.2rem;
+    --title_fsize: 0.9rem;
+    --GTR: 100px;
+  }
+  .img_item:hover p {
+    padding: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  :root {
+    --columns_in_gallery: 4;
+    --grid_gap: 10px;
+    --logo_fsize: 1rem;
+    --title_fsize: 0.75rem;
+    --GTR: 100px;
+  }
+  .img_item:hover p {
+    padding: 0.6rem;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  :root {
+    --columns_in_gallery: 3;
+    --grid_gap: 8px;
+    --logo_fsize: 0.9rem;
+    --title_fsize: 0.65rem;
+    --GTR: 75px;
+  }
+  .img_item:hover p {
+    padding: 0.45rem;
+  }
+  .menu_items {
+    display: none;
+  }
+  .col-1,
+  .col-2 {
+    grid-column: span 1;
+  }
+.col-3,
+  .col-4 {
+    grid-column: span 2;
+  }
+  .row-1,
+  .row-2 {
+    grid-row: span 1;
+  }
+  .row-3,
+  .row-4 {
+    grid-row: span 2;
+  }
+}
+@media only screen and (max-width: 299px) {
+  :root {
+    --columns_in_gallery: 2;
+    --grid_gap: 7px;
+    --logo_fsize: 0.85rem;
+    --title_fsize: 0.6rem;
+    --GTR: 70px;
+  }
+  .img_item:hover p {
+    padding: 0.45rem;
+  }
+  .menu_items {
+    display: none;
+  }
+  .col-1,
+  .col-2 {
+    grid-column: span 1;
+  }
+  .col-3,
+  .col-4 {
+    grid-column: span 2;
+  }
+  .row-1,
+  .row-2 {
+    grid-row: span 1;
+  }
+  .row-3,
+  .row-4 {
+    grid-row: span 2;
+  }
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(../Poppins/Poppins-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: myFirstFont;
+}
+body {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url(../image/bgfile.jpg);
+
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-clr);
+  font-family: myFirstFont;
+}
+
+body::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+body::-webkit-scrollbar-track {
+  background: #3838387c !important;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #e0120ba4 !important;
+  border: 1px solid #ff020279 !important;
+  border-radius: 1px !important;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url(../image/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+
+  *{
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+  
+  }
+  #logo-img{
+      padding: 1px;
+  }
+  .text-box h1{
+     font-size: 30px;
+     font-weight: bold;
+  }
+  .text-box p{
+      font-size: 12px;
+  }
+  .nav-links ul li{
+      display: block;
+  }
+  .nav-links{
+      position: absolute;
+      background: #f44336;
+      height: 100vh;
+      width: 200px;
+      top: 0%;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+  .icon{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 25px;
+      cursor: pointer;
+  }
+  .nav-links ul{
+      padding: 30px;
+  }
+
+  /*Course in Media query*/
+ 
+  .course-col{
+      margin: 10px 10px;
+  }
+  .row{
+      flex-direction: column;  
+  }   
+  .course-col:hover{
+      box-shadow: 3px 3px 0.5px 0.5px rgba(0, 0, 0, 0.486);
+  }
+      /* Facilities */
+  .facilities-col img:hover{
+      box-shadow:none;
+  }
+
+  /* Call To Action in Media query*/
+  .ctn h1{
+      font-size: 24px;
+  }
+  .newstab {
+      background: #002147;
+      color: #fff;
+      padding: 4.5px 6px;
+      font-size: 9.5px;
+      position: absolute;
+      z-index: 1;
+      margin-left: 0px;
+      left: 20px;
+  }
+  
+  .newscontent {
+      height: 20px;
+      background: #705be4
+      
+  }
+  
+  .newscontent .mask {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+  }
+  
+  .newscontent ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  
+  .newscontent ul li {
+      display: inline-block;
+  }
+  
+  .newscontent ul li span {
+      font-weight: bold;
+      padding-right: 5px;
+      color: #6b0f11;
+  }
+  
+  .newscontent ul li:last-child {
+      border-bottom: 0;
+  }
+  
+  .newscontent ul li {
+      padding: 4px 5px 0;
+      display: inline-block;
+      margin-left: 2px;
+      padding-left: 2px;
+      overflow: hidden;
+  }
+  
+  .newscontent ul li a {
+      width: 100%;
+      text-decoration: none;
+      font-size: 9px;
+      color: #fff;
+  }
+  
+  .newscontent ul li a:hover {
+      color: #002147;
+      text-decoration: none;
+  }
+  
+  .newscontent marquee {
+      margin-left: 80px;
+  }
+  .datenews {
+      color: #fff;
+  }
+  .xcvb{
+      height: 40%;
+      width:80%;
+  }
+  #boxed{
+      border: 2px solid;
+      background-color: #e2d7e2a4;
+      color: #222;
+  }
+
+}

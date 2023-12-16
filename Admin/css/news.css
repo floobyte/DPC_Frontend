@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-div {
+  width: 100%;
+}
+
+#notifications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin: auto;
+}
+
+#notifications-table th,
+#notifications-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#notifications-table th,
+#notifications-table td {
+  background-color: #f2f2f2;
+}
+
+/* Style the delete button */
+button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c82333;
+}

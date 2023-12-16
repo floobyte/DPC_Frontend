@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DPC</title>
+    <link rel="shortcut icon" href="image/logoDPC.png" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/contact_style.css">
+   
+   
+    <link rel="stylesheet" href="./css/newcf.css">
+    <link rel="stylesheet" href="./css/try.css">
+</head>
+<body>
+  <div id="news-container"></div>
+	<div id="nav-container"></div>
+  
+  <div class="container">
+    <span class="big-circle"></span>
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Director's Message</h3>
+        <img class="xcvb" src="./image/dr_kk.png" alt="Dr. KK Chaturvedi" srcset="">
+        <p class="text">
+          Serving humanity is the best duty of human beings. There is not any good work than providing education to an illiterate, possibly by assimilating this emotion, we do not consider education as a business.
+          <span id="moreContent" style="display: none;">
+              Seoni is a backward district of Madhya Pradesh where technical and professional education facilities are always lacking from traditional education facilities. I want to highlight the background and atmosphere of D.P. Chaturvedi College. Mr. D.P. Chaturvedi belonged to a middle-class family. His complete life is full of examples of hard work, God's grace, and devotion to the goddess Saraswati. He struggled all the time from the beginning to get and avail education to all parts of society. With the help of God and a lot of hard work, he completed the journey of being a principal from a teacher.
+                
+              By the name of such a legendary person, I started this college in the year 2000 under the guidance of Shriram Adarsh Shiksha Samiti Seoni. We dreamed of bringing Seoni district to the zenith of the education field based on values, guidance, and hard work success. The institution strongly believes that any society or nation cannot be developed or successful without education. Therefore, the institution is working sincerely and setting milestones in the educational era day by day. D.P.C. College offers microbiology, biotechnology, electronics, computer science, regular courses such as BSc, BCom, BA at the graduate level, and biotechnology, chemistry, maths, and computer science at the postgraduate level. Also, some professional and technical courses such as MSW, B.Ed., D.Ed. are offered at the college. The institute is committed to starting medical, law, and other professional educational courses to build a better nation. The institution is following its social responsibilities while performing duties in the educational field, and it will continue to do so in the near future.
+           </span>
+          <a href="javascript:void(0);" id="readMoreBtn" class="btnrd" onclick="toggleReadMore()">Read More</a>
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="img/location.png" class="icon" alt="" />
+            <p>D.P. Chaturvedi College Seoni (M.P.)</p>
+          </div>
+          <div class="information">
+            <img src="img/email.png" class="icon" alt="" />
+            <p>dpccollege@gamil.com</p>
+          </div>
+          <div class="information">
+            <img src="img/phone.png" class="icon" alt="" />
+            <p>123-456-789</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="index.html" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+          
+        </form>
+       
+      </div>
+      
+    </div>
+  </div>
+  <div id="footer-container"></div>
+  
+  <script>
+      function toggleReadMore() {
+        var moreContent = document.getElementById("moreContent");
+        var readMoreBtn = document.getElementById("readMoreBtn");
+      
+        if (moreContent.style.display === "none") {
+          moreContent.style.display = "inline";
+          readMoreBtn.textContent = "Read Less";
+        } else {
+          moreContent.style.display = "none";
+          readMoreBtn.textContent = "Read More";
+        }
+      }
+      </script>
+</body>
+<script src="./components/exportData.js"></script>
+
+</html>

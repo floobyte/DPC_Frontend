@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification Display</title>
+    <link rel="stylesheet" href="./css/admission_style.css" />
+  </head>
+  <body>
+    <div class="newstab">Latest News</div>
+    <div class="newscontent" id="newsContainer">
+      <marquee
+        class=""
+        behavior="scroll"
+        direction="left"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"></marquee>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const response = await fetch(
+            "https://garb-prawn.cyclic.app/api/notification/all"
+          );
+          const notifications = await response.json();
+
+          const newsContainer = document.getElementById("newsContainer");
+          const marqueeElement = newsContainer.querySelector("marquee");
+          const uls = document.createElement("ul");
+
+          notifications.forEach((notification) => {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+            const datenews = document.createElement("div");
+            datenews.setAttribute("class", datenews);
+
+            anchor.href = notification.newsUrl;
+            anchor.textContent = notification.news;
+            datenews.className = "datenews";
+            anchor.appendChild(datenews);
+            listItem.appendChild(anchor);
+            uls.appendChild(listItem);
+            marqueeElement.appendChild(uls);
+          });
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

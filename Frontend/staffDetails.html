@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .details-container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .details {
+        margin-top: 20px;
+      }
+
+      .details p {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="details-container">
+      <h1>Staff Details</h1>
+      <div class="details" id="staffDetails"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const staffDetailsContainer = document.getElementById("staffDetails");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const staffId = urlParams.get("id");
+
+        if (!staffId) {
+          staffDetailsContainer.innerHTML =
+            "<p>No staff ID found in the URL.</p>";
+          return;
+        }
+
+        fetch(`https://garb-prawn.cyclic.app/api/staff/${staffId}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((staffDetails) => {
+            const detailsHtml = `
+            <p><strong>Name:</strong> ${staffDetails.name}</p>
+            <p><strong>Email:</strong> ${staffDetails.email}</p>
+            <p><strong>Designation:</strong> ${staffDetails.designation}</p>
+            <p><strong>Department:</strong> ${staffDetails.department}</p>
+            <!-- Add other details as needed -->
+          `;
+            staffDetailsContainer.innerHTML = detailsHtml;
+          })
+          .catch((error) => {
+            console.error("Error fetching staff details:", error);
+            staffDetailsContainer.innerHTML =
+              "<p>Error fetching staff details.</p>";
+          });
+      });
+    </script>
+  </body>
+</html>

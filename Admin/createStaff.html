@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREATE STAFF</title>
+    <link rel="shortcut icon" href="image/logoDPC.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/admission_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+  </head>
+  <body>
+    <div id="news-container"></div>
+    <div id="nav-container"></div>
+    <section class="header">
+      <div class="wrapper">
+        <div class="r_form_wrap">
+          <div class="title">
+            <p>STAFF DETAILS</p>
+          </div>
+          <div class="r_form">
+            <form id="staffForm">
+              <div class="input_wrap">
+                <label for="name">Name*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="name"
+                    class="input"
+                    id="name"
+                    placeholder="Enter the Name"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="fatherName">Father's Name*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="fatherName"
+                    class="input"
+                    id="fatherName"
+                    placeholder="Enter Father's Name"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="designation">Designation*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="designation"
+                    class="input"
+                    id="designation"
+                    placeholder="Enter Designation"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="category">Category*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="category"
+                    class="input"
+                    id="category"
+                    placeholder="Enter Category"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="dob">Date of Birth*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="date"
+                    name="dob"
+                    class="input"
+                    id="dob"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="department">Department*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="department"
+                    class="input"
+                    id="department"
+                    placeholder="Enter Department"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="bloodGroup">Blood Group*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="bloodGroup"
+                    class="input"
+                    id="bloodGroup"
+                    placeholder="Enter Blood Group"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="appointmentDate">Appointment Date*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="date"
+                    name="appointmentDate"
+                    class="input"
+                    id="appointmentDate"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="email">Email*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="email"
+                    name="email"
+                    class="input"
+                    id="email"
+                    placeholder="Enter Email"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="phone">Phone*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="phone"
+                    class="input"
+                    id="phone"
+                    placeholder="Enter Phone"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="address">Address*</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="text"
+                    name="address"
+                    class="input"
+                    id="address"
+                    placeholder="Enter Address"
+                    required />
+                </div>
+              </div>
+
+              <div class="input_wrap">
+                <label for="image">Image</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <input
+                    type="file"
+                    name="image"
+                    class="input"
+                    id="image"
+                    placeholder="Enter Image" />
+                </div>
+              </div>
+
+              <input type="submit" class="button" value="CREATE" />
+              <input type="reset" class="clear_ad" value="Clear" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./javascript/createStaff.js"></script>
+  </body>
+  <script>
+    // Your existing scripts here
+  </script>
+</html>

@@ -1,0 +1,185 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(../Poppins/Poppins-Regular.ttf);
+}
+    @font-face {
+    font-family: bold;
+    src: url(../Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: secound;
+    src: url(../Poppins/Poppins-Bold.ttf);
+}
+
+/* Set the font for the entire page */
+
+/* Style for the footer */
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(to right, rgb(41, 0, 60), #171618);
+  color: #fff;
+  padding: 40px 0 5px;
+  border-top-left-radius: 125px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* Style for the row within the footer */
+footer .row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Style for columns within the row */
+footer .col {
+  flex-basis: 20%;
+  padding:4px;
+}
+
+/* Style for the logo */
+footer .logo {
+  width: 35%;
+  margin-bottom: 10px;
+}
+
+/* Style for h3 headings within columns */
+footer .col h3 {
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Style for email IDs (assuming they are within a list) */
+footer email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+/* Style for links within the email IDs */
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Style for the form within the footer */
+footer form {
+  padding-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 50px;
+}
+
+/* Style for icons in the form (assuming they use Font Awesome) */
+footer form .far {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Style for the input field in the form */
+footer form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+/* Style for the submit button in the form */
+footer form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Style for icons within the submit button */
+footer form button .fas {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Style for social icons (assuming they use Font Awesome) */
+footer .social-icons .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+/* Style for the copyright section */
+footer .copyright {
+  text-align: center;
+}
+
+/* Style for the underline effect */
+footer .underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+/* Style for the animated span within the underline */
+footer .underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+/* Keyframes for the animation */
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 700px) {
+  footer {
+    bottom: unset;
+  }
+  footer .col {
+    flex-basis: 100%;
+  }
+  footer .col:nth-child(2),
+  footer .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+}

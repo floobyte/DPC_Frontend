@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREATE NOTICE</title>
+    <link rel="shortcut icon" href="image/logoDPC.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/admission_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+  </head>
+  <body>
+    <div id="news-container"></div>
+    <div id="nav-container"></div>
+    <section class="header">
+      <div class="wrapper">
+        <div class="r_form_wrap">
+          <div class="title">
+            <p>CREATE STUDENT CORNER</p>
+          </div>
+          <div class="r_form">
+            <form id="studentcornerForm">
+              <div class="input_wrap">
+                <label for="heading">Heading</label>
+                <div class="input_item">
+                  <i class="fa fa-info" id="icon"></i>
+                  <textarea
+                    name="heading"
+                    class="input"
+                    id="heading"
+                    placeholder="Enter the heading"
+                    required></textarea>
+                </div>
+              </div>
+              <div class="input_wrap">
+                <label for="url">Url</label>
+                <div class="input_item">
+                  <i class="fa fa-link" id="icon"></i>
+                  <textarea
+                    name="url"
+                    class="input"
+                    id="url"
+                    placeholder="Enter the Url"
+                    required></textarea>
+                </div>
+              </div>
+              <input type="submit" class="button" value="POST" />
+              <input type="reset" class="clear_ad" value="Clear" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./javascript/createStudentCorner.js"></script>
+  </body>
+  <script>
+    // Your existing scripts here
+  </script>
+</html>

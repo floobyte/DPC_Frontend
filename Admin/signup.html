@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGNUP</title>
+    <link rel="shortcut icon" href="image/logoDPC.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/admission_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <div class="wrapper">
+        <div class="r_form_wrap">
+          <div class="title">
+            <p>SignUp</p>
+          </div>
+          <div class="r_form">
+            <form id="registerForm">
+              <div class="input_wrap">
+                <label for="Title">Name</label>
+                <div class="input_item">
+                  <i class="fa fa-user" id="icon"></i>
+                  <input
+                    type="text"
+                    name="name"
+                    class="input"
+                    id="name"
+                    placeholder="Enter the Full Name"
+                    required />
+                </div>
+              </div>
+              <div class="input_wrap">
+                <label for="description">Email ID</label>
+                <div class="input_item">
+                  <i class="fa fa-envelope" id="icon"></i>
+                  <input
+                    type="text"
+                    name="email"
+                    class="input"
+                    id="email"
+                    placeholder="Enter the Email ID"
+                    required />
+                </div>
+              </div>
+              <div class="input_wrap">
+                <label for="description">Password</label>
+                <div class="input_item">
+                  <i class="fa fa-eye" id="icon"></i>
+                  <input
+                    type="text"
+                    name="password"
+                    class="input"
+                    id="password"
+                    placeholder="Enter the Password"
+                    required />
+                </div>
+              </div>
+
+              <input type="submit" class="button" value="SignUp" />
+
+              <div></div>
+              <input type="reset" class="clear_ad" value="Clear" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./javascript/register.js"></script>
+  </body>
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showmenu() {
+      navLinks.style.right = "0";
+    }
+    function hidemenu() {
+      navLinks.style.right = "-200px";
+    }
+    function sendmail() {
+      Email.send({}).then((message) => alert("Thanks you- Team DPC"));
+    }
+  </script>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+</html>

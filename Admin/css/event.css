@@ -1,0 +1,112 @@
+.tempta {
+  font-family: "Arial", sans-serif;
+  /* background-image: url('../image/banner_dpc.jpg'); */
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+/* Customize Alertify's confirmation dialog */
+.alertify .ajs-confirm {
+  width: 250px; /* Set the width to your desired size */
+}
+
+.alertify .ajs-confirm .ajs-header {
+  background-color: #4caf50; /* Set the background color to a green shade */
+  color: #fff; /* Set the text color to contrast with the background color */
+}
+
+.alertify .ajs-confirm .ajs-buttons .ajs-ok {
+  background-color: #4caf50; /* Set the background color for the "OK" button */
+  color: #fff; /* Set the text color for the "OK" button */
+}
+
+.alertify .ajs-confirm .ajs-buttons .ajs-cancel {
+  background-color: #f44336; /* Set the background color for the "Cancel" button */
+  color: #fff; /* Set the text color for the "Cancel" button */
+}
+
+.xyz-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: transparent; /* Add a transparent background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff0000; /* Red color, you can customize */
+}
+
+.xyz-item {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.xyz-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.xyz-title {
+  font-size: 20px;
+  margin: 0;
+  padding-left: 8px;
+  color: #333;
+  /* text-align: center; Center the title text */
+}
+
+.xyz-description {
+  margin: 0;
+  color: #666;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center; /* Center the description text */
+  font-size: 15px;
+  font-style: italic;
+}
+
+.xyz-text {
+  margin: 0;
+  color: #666;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.xyz-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

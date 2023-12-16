@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta
+      name="description"
+      content="The D.P. Chaturvedi College in Seoni offers a wide range of academic disciplines, including Science, Commerce, Arts, and Education. It has played a pivotal role in establishing a benchmark for excellence in education." />
+    <meta name="keywords" content="D.P.Chaturvedi" />
+    <meta name="author" content="Floobyte" />
+
+    <title>D.P. Chaturvedi College</title>
+
+    <link rel="stylesheet" href="css/main_style.css" />
+
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="shortcut icon" href="./image/logoDPC.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+  </head>
+  <body>
+    <div class="newstab">Latest News</div>
+    <div class="newscontent" id="newsContainer">
+      <marquee
+        class=""
+        behavior="scroll"
+        direction="left"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"></marquee>
+    </div>
+    <div id="nav-container"></div>
+
+    <!-- ... (your existing HTML structure) -->
+    <h1
+      style="text-align: center; color: aliceblue; text-decoration: underline">
+      Gallery
+    </h1>
+    <div class="img_container grid" id="imageGallery">
+      <!-- Images will be dynamically inserted here -->
+    </div>
+
+    <div id="image-modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img id="modal-image" class="modal-image" />
+        <div class="img-info">
+          <p id="modal-date" class="modal-date"></p>
+          <p id="modal-caption" class="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./javascript/gallery.js">
+      // Function to fetch data from the API and create gallery items
+    </script>
+  </body>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./components/export.js"></script>
+</html>
